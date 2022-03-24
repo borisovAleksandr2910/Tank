@@ -3,6 +3,9 @@ public class Tank {
     private int x, y;
     private int dir;
     private int fuel;
+    static final String MODEL_TANK = "T - 34";
+    static int ntanks;
+    private int n;
 
     public Tank() {
         this(0, 0, 100);
@@ -16,6 +19,7 @@ public class Tank {
         this.x = x;
         this.y = y;
         this.fuel = fuel;
+        n = ++ntanks;
     }
 
     public void goForward(int i) {
@@ -29,7 +33,7 @@ public class Tank {
     }
 
     public void printPosition() {
-        System.out.println("The Tank is at " + x + ", " + y + " now.");
+        System.out.println("The Tank " + MODEL_TANK + "-" + n + " is at " + x + ", " + y + " now.");
     }
 
     public void turnLeft() {
