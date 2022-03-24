@@ -1,8 +1,8 @@
 public class Tank {
 
-    int x, y;
-    int dir;
-    int fuel;
+    private int x, y;
+    private int dir;
+    private int fuel;
 
     public Tank() {
         this(0, 0, 100);
@@ -45,4 +45,5 @@ public class Tank {
     public void goBackward(int i) {
         goForward(-i);
     }
+
 }
